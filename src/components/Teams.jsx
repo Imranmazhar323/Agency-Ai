@@ -10,7 +10,10 @@ const Teams = () => {
    <div className="grid grid-cols-2 md:grid-col-3 xl:grid-cols-4 gap-5">
     {teamData.map((team, index) => {
      return (
-      <div className="flex max-sm:flex-col items-center gap-5 p-4 rounded-xl border border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-xl shadow-gray-100 dark:shadow-white/5 hover:scale-103 transition-all duration-400">
+      <div
+       className="flex max-sm:flex-col items-center gap-5 p-4 rounded-xl border border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-xl shadow-gray-100 dark:shadow-white/5 hover:scale-103 transition-all duration-400"
+       key={index}
+      >
        <img src={team.image} className="w-12 h-12 rounded-full" alt="" />
        <div>
         <h3 className="font-bold text-sm">{team.name}</h3>
