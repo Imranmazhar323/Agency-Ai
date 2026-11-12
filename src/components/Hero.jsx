@@ -11,7 +11,7 @@ const Hero = () => {
    <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5, delay: 0.7 }}
+    transition={{ duration: 0.5, delay: 0.4 }}
     viewport={{ once: true }}
     className="inline-flex items-center gap-2 border border-gray-300 p-1.5 pr-4 rounded-full"
    >
@@ -22,34 +22,36 @@ const Hero = () => {
    <motion.h1
     initial={{ opacity: 0, y: 40 }}
     whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6, delay: 0.8 }}
+    transition={{ duration: 0.6, delay: 0.6 }}
     viewport={{ once: true }}
     className="text-4xl sm:text-5xl md:text-6xl xl:text-[84px] font-medium xl:leading-23.75 max-w-5xl"
    >
-    Turning Imagination into{" "}
+    Turning Imagination into
     <span className="bg-linear-to-r from-[#5044E5] to-[#4d8cea] bg-clip-text text-transparent">digital</span> impact.
    </motion.h1>
 
    <motion.p
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5, delay: 1 }}
+    transition={{ duration: 0.5, delay: 0.8 }}
     viewport={{ once: true }}
     className="sm-text-lg font font-medium text-gray-500 dark:text-white/75 max-w-4/5 sm:max-w-lg pb-3"
    >
     Creating meaningful connections and turning big ideas into interactive digital experiences
    </motion.p>
 
-   <motion.div
-    initial={{ opacity: 0, y: 0.8 }}
-    whileInView={{ opacity: 1, y: 1 }}
-    transition={{ duration: 0.6, delay: 2 }}
-    viewport={{ once: true }}
-    className="relative"
-   >
-    <img src={assets.second_hero_image} alt="" className="w-full max-w-6xl rounded-xl" />
+   <div className="relative">
+    <motion.img
+     initial={{ opacity: 0, y: 0.8 }}
+     whileInView={{ opacity: 1, y: 1 }}
+     transition={{ duration: 0.6, delay: 1 }}
+     viewport={{ once: true }}
+     src={assets.second_hero_image}
+     alt=""
+     className="w-full max-w-6xl rounded-xl"
+    />
     <img src={assets.bgImage1} alt="" className="absolute -top-40 -right-40 sm:-top-100 sm:-right-70 -z-1 dark:hidden" />
-   </motion.div>
+   </div>
   </div>
  );
 };
